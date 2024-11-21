@@ -139,6 +139,7 @@ body {
   transform: skewX(3deg);
 }
 .header__button {
+  position: relative;
   border-radius: 0.5rem;
   padding: 1rem;
   font-family: "Aileron", sans-serif;
@@ -152,9 +153,29 @@ body {
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
   transition: all 0.5s ease-in;
 }
+.header__button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #a3cfcd;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  border-radius: 0.5rem;
+  transform-origin: left;
+  transition: all 0.5s ease-in;
+  transition-delay: 0.6s;
+}
+.header__button:hover::before {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(1);
+}
 .header__button:hover {
   color: #000;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .blur,
