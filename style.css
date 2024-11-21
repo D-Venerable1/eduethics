@@ -69,6 +69,10 @@ body {
   border-radius: 10.5rem;
   color: #fff;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+.navbar__profile:hover {
+  background-color: #009ede;
 }
 .navbar__image {
   width: 3.5rem;
@@ -146,6 +150,11 @@ body {
   color: #fff;
   margin-top: 7rem;
   box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in;
+}
+.header__button:hover {
+  color: #000;
+  background-color: #fff;
 }
 
 .blur,
